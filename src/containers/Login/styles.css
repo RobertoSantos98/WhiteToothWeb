@@ -61,10 +61,11 @@ input{
 .button {
     background-color: #0288D1;
     width: 20%;
-    height: 30px;
+    height: 36px;
     border-radius: 4px;
     color: #FFF;
     font-weight: bold;
+    border-width: 0;
 }
 .icon {
     margin-right: 8px;
