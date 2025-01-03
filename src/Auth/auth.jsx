@@ -1,12 +1,13 @@
 import { useState } from "react";
 
 import Login from "../containers/Login/login";
-import Home from "../containers/Home/home";
+import RouteApplication from "../Components/route";
 
 function Auth(){
-    const [isLogged, setIsLogged] = useState(!!localStorage.getItem("token"));
+    // const [isLogged, setIsLogged] = useState(!!localStorage.getItem("token"));
+    const [isLogged, setIsLogged] = useState(true);
 
-    return isLogged ? <Home /> : <Login setIsLogged={setIsLogged} />;
+    return isLogged ? <RouteApplication /> : <Login setIsLogged={setIsLogged} />;
 }
 
 export default Auth;

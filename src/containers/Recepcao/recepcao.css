@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-recepcao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+.content-recepcao{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    padding: 18px;
+}
+.titleMedicosDisponiveis{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #B0BEC5;
+}
+.medicosDisponiveis{
+    background-color: #FFF;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 4px;
+}
+.agenda{
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    margin-left: 18px;
+    padding-left: 18px;
+    width: 100%;
+    border-radius: 4px;
+}
+.contentConsultas{
+    display: flex;
+    flex-direction: row;
+}
+.optionConsultas{
+    display: flex;
+    flex-direction: column;
+    margin-left: 18px;
+    margin-top: 56px;
+}
+.btnConsultas{
+    background-color: #43A047;
+    color: #FFF;
+    border-width: 0;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.btnConsultas:hover{
+    background-color: #388E3C;
+}
+
+.tabela-consultas {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .tabela-consultas th,
+  .tabela-consultas td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .tabela-consultas th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .tabela-consultas tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .tabela-consultas tr:hover {
+    background-color: #0288D1;
+  }
+  .tabelaConsultas{
+    width: 85%;
+  }
+  
