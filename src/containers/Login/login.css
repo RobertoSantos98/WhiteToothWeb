@@ -3,18 +3,18 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica;
-
 }
 
-.container {
+.container-login {
     display: flex;
+    flex-direction: row;
     align-items: center;
     height: 100vh;
     background: #F1F1F1F1;
 
 }
 
-.Welcome {
+.Welcome-login {
     display: flex;
     flex-direction: column;
     background-color: #0288D1;
@@ -25,7 +25,12 @@
     align-items: center;
     justify-content: center;
 }
-.content {
+.Welcome-login img {
+    width: 400px;
+    height: 400px;
+}
+
+.content-login {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -58,7 +63,7 @@ input{
     padding-left: 8px;
     font-size: 16px;
 }
-.button {
+.button-login {
     background-color: #0288D1;
     width: 20%;
     height: 36px;

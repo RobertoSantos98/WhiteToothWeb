@@ -2,31 +2,48 @@ import { FaUser, FaLock } from 'react-icons/fa';
 
 import { useState } from 'react';
 
-import './styles.css';
+import './login.css';
+import UserServices from '../../Services/UserServices';
 
-const Login = () =>{
+const Login = ({ setIsLogged }) =>{
 
     const [usuario, setUsuario ] = useState('');
     const [ password, setPassword ] = useState('');
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
-        console.log('Usuario:', usuario);
-        console.log('Senha:', password);
+        
+        const usuarioLogin = {
+            usuario: usuario,
+            password: password
+        }
+
+        try {
+            const data = await UserServices.login(usuarioLogin);
+            localStorage.setItem('token', data.mensagem);
+            localStorage.setItem('usuario', usuarioLogin.usuario);
+            setIsLogged(true);
+            alert("Login efetuado com sucesso");
+
+        } catch (error) {
+            console.log(error);
+            
+        }
+
     }
 
     return (
-        <div className="container">
-            <div className='Welcome'>
+        <div className="container-login">
+            <div className='Welcome-login'>
                 <div>
-                    <img src="../../../public/logo.png" />
+                    <img src="/logo.png" />
                 </div>
                 <div>
-                    <h1 className='textWelcomePequeno'>Bem-vindo á</h1>
+                    <h1 className='textWelcomePequeno'>Bem-vindo à</h1>
                     <h2 className='textWelcome'>WhiteTooth</h2>
                 </div>
             </div>
-            <div className='content'>
+            <div className='content-login'>
                 <form onSubmit={handleLogin}>
                     <h1>Acesse o sistema</h1>
                     <div>
@@ -45,7 +62,7 @@ const Login = () =>{
                             onChange={(e) => setPassword(e.target.value)}    
                         />
                     </div>
-                    <button className='button' type="submit"  >Entrar</button>
+                    <button className='button-login' type="submit"  >Entrar</button>
 
                     <p>Não tem uma conta? <a href="/cadastro">Cadastre-se</a></p>
                 </form>

@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-home {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: #F1F1F1F1;
+}
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    background: #0288D1;
+    color: #FFF;
+}
+.welcome-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.title-home {
+    font-size: 36px;
+    color: #0288D1;
+    text-shadow: #FFF 1px 1px 0;
+}
+.buttonLogOut{
+    padding: 6px 24px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: #FFF;
+    margin-left: 16px;
+}
+.usuarioLogado-home{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
