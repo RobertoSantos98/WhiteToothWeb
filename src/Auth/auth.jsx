@@ -5,7 +5,7 @@ import RouteApplication from "../Components/route";
 
 function Auth(){
     // const [isLogged, setIsLogged] = useState(!!localStorage.getItem("token"));
-    const [isLogged, setIsLogged] = useState(true);
+    const [isLogged, setIsLogged] = useState(false);
 
     return isLogged ? <RouteApplication /> : <Login setIsLogged={setIsLogged} />;
 }
